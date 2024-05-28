@@ -1,33 +1,36 @@
 # 2023-2024-4GP-BriereRome-Clair
 Projet Capteur de Jules et Gabriel 
 # Projet Capteur
+
 ## Contexte <br>
 Nous avons rélaié ce projet dans le carde de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
 L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphique. <br>
 
-## Contact <br>
-Jules: jules.briere-rome@insa-toulouse.fr <br>
-Gabriel: clair@insa-toulouse.fr
-
 # 1. Presentation Générale
-<details>
-<summary> plus </summary>
-Voici un petit schéma de notre projet.
-    ```mermaid
-graph TD;
+Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
+```mermaid
+    graph TD;
+    classDef PCB1 fill:pink,color:black,stroke:black;
+    classDef App fill:lightblue,color:black,stroke:black;
     A[Flex Sensor]-->B((Carte Arduino));
-    B((Carte Arduino))-->G[Module BT];
-    E[Boutons]-->B((Carte Arduino));
-    E[Boutons]-.-F[OLED];
-    B[Capteur Graphite]-->C[Ampli];
-    C[Ampli]-->B((Carte Arduino));
-    C[Ampli]<--> D[Potetiomètre];
-    D[Potetiomètre] -.- E[Boutons];
-    H[(Appli)] -.- G[Module BT];
-    ``` 
-    Le projet comprend plusieures parties differentes. Le principe est que nous amplificatieur pour lire la valeur de la du capteur sur l'arduino. Nous utilisons ensuite une application mobile pour lire les mesures sur notre téléphone. <br>
-        Chacune de parties de ce projet est detaillé ci-dessous.
-</details>
+    B((Carte Arduino))-->Module_BT;
+    Boutons-->B((Carte Arduino));
+    D[Capteur Graphite]-->Ampli;
+    Ampli-->B((Carte Arduino));
+    Potentiomètre-->Ampli;
+    B((Carte Arduino))-->Potentiomètre;
+    Appli -.- Module_BT;
+    B((Carte Arduino))-->OLED;
+    PCB
+    class Ampli PCB1;
+    class Potentiomètre PCB1;
+    class Boutons PCB1;
+    class OLED PCB1;
+    class Module_BT PCB1;
+    class Appli App;
+    class PCB PCB1;
+``` 
+Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour recolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
 
 # 2. L'electronique analogique
 <details>
