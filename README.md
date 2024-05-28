@@ -54,11 +54,17 @@ Gabi c'est aussi pour toi
 Afin de communiquer avec l'adruino, nous avons créé une application en utilisant "MIT app inventor".
 ## Présentation générale
 Notre application comporte : <br>
-* 2 graphiques
-* 2 afficheurs numériques
+* 2 graphiques :
+    * 1 pour le capteur graphite
+    * 1 pour le flex sensor
+* 2 afficheurs numériques avec des valeurs en 0 et 255
+  * 1 pour le capteur graphite
+  * 1 pour le flex sensor
 * 1 bouton de sélection Bluetooth
 * 1 bouton de reset pour les graphiques
-* 
+  <br>
+   <img src="Images/code%20app.png"  width=60%> 
+   <img src="Images/ecrant%20app.png"  width= 30%> <br>
 ## Partie 1 : Sélection du périphérique Bluetooth
 
 
