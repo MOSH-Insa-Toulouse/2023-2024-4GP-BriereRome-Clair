@@ -51,7 +51,7 @@ Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur 
    <img src="Images/Kicad%20partie%201.png"  width="900"> <br>
    <br>
    Partie PCB : <br>
-   <img src="Images/Kicad%20partie%202.png" alt="Le projet dans son ensemble" width="900"> <br>
+   <img src="Images/Kicad%20partie%202.png"  width="900"> <br>
 </details>
 
 # 4. L'Arduino : [ici pour le code](lien)
