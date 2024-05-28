@@ -1,10 +1,6 @@
 # 2023-2024-4GP-BriereRome-Clair
 Projet Capteur de Jules et Gabriel 
 # Projet Capteur
-
-## Le projet
-
-
 ## Contexte <br>
 Nous avons rélaié ce projet dans le carde de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
 L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphique. <br>
