@@ -1,7 +1,6 @@
 # 2023-2024-4GP-BriereRome-Clair
 Projet Capteur de Jules et Gabriel 
 # Projet Capteur
-
 ## Contexte <br>
 Nous avons rélaié ce projet dans le carde de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
 L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphique. <br>
@@ -33,17 +32,13 @@ Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties
 Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour recolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
 
 # 2. L'electronique analogique
-<details>
-<summary> plus </summary>
 Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
     Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un montage...<br>
     Gabriel c'est ta partie
-</details>
 
 # 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield)
-<details>
-<summary> plus </summary>
-    Nous avons réalisé un PCB en utilisant l'application Kicad. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
+Nous avons réalisé un PCB en utilisant l'application Kicad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
+    Nous avons créé la plupart des emprintes pour les rajouter au PCB. 
     Une fois le document complété, nous avons imprimé le PCB et avons soudé chacun des composants. <br>
     <br>
    Partie Schématique: <br>
@@ -51,18 +46,20 @@ Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur 
    <br>
    Partie PCB : <br>
    <img src="Images/Kicad%20partie%202.png"  width="900"> <br>
-</details>
 
 # 4. L'Arduino : [ici pour le code](lien)
-<details>
-<summary> plus </summary>
-Coucou
-</details>
+Gabi c'est aussi pour toi
 
 # 5. L'Application
-<details>
-<summary> plus </summary>
-Coucou
-</details>
+Afin de communiquer avec l'adruino, nous avons créé une application en utilisant "MIT app inventor".
+## Présentation générale
+Notre application comporte : <br>
+* 2 graphiques
+* 2 afficheurs numériques
+* 1 bouton de sélection Bluetooth
+* 1 bouton de reset pour les graphiques
+* 
+## Partie 1 : Sélection du périphérique Bluetooth
+
 
 
