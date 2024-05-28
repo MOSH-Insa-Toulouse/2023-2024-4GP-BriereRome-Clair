@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Librairie projet")(type "KiCad")(uri "${KIPRJMOD}/Librairie projet.kicad_sym")(options "")(descr ""))
+  (lib (name "LTC1050ACN8_PBF")(type "KiCad")(uri "${KIPRJMOD}/LTC1050ACN8_PBF.kicad_sym")(options "")(descr ""))
+  (lib (name "MaLyb_projet")(type "KiCad")(uri "${KIPRJMOD}/MaLyb_projet.kicad_sym")(options "")(descr ""))
+  (lib (name "KY-040")(type "KiCad")(uri "${KIPRJMOD}/KY-040.kicad_sym")(options "")(descr ""))
+)
