@@ -24,6 +24,7 @@ Jules: jules.briere-rome@insa-toulouse.fr <br>
 Gabriel: clair@insa-toulouse.fr
 
 ### Table des matières
-
+## Nous avons séparé notre travail en plusieurs parties: 
+[Le Kicad](
 
 
