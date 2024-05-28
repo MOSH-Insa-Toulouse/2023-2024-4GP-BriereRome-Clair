@@ -46,7 +46,12 @@ Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur 
 <summary> plus </summary>
     Nous avons réalisé un PCB en utilisant l'application Kicad. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
     Une fois le document complété, nous avons imprimé le PCB et avons soudé chacun des composants. <br>
-    
+    <br>
+   Partie Schématique: <br>
+   <img src="Images/Kicad%20partie%201.png"  width="900"> <br>
+   <br>
+   Partie PCB : <br>
+   <img src="Images/Kicad%20partie%202.png" alt="Le projet dans son ensemble" width="900"> <br>
 </details>
 
 # 4. L'Arduino : [ici pour le code](lien)
