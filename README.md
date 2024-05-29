@@ -10,6 +10,7 @@ L'objectif de ce projet est de tester les caractéristiques d'un capteur en grap
 ### [3. KiCad](KiCad)
 ### [4. L'Arduino](#dudu)
 ### [5. L'Application](#app)
+### [6. Résultats](#res)
 
 # 1. Presentation Générale <a name="pg">
 Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
@@ -114,4 +115,5 @@ Afin de rendre les données facilment lisisbles, nous avons décidé d'utiliser 
 Afin de recentrer automatiquement le graphique, nous attendons d'avoir le bon nombre de mesures et utilisons ensuite la fonction SetDomain pour décaler le graphique. Le bouton reset permet de remettre l'echelle à 0.
 <img src="Images/code%20app3.png"  width=80%> 
 
+# 6. Résultats <a name="res">
 
