@@ -33,8 +33,8 @@ Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance
 
 # 2. L'electronique analogique
 Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
-    Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un montage...<br>
-    Gabriel c'est ta partie
+    Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
+    La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
 
 # 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield)
 Nous avons réalisé un PCB en utilisant l'application Kicad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
