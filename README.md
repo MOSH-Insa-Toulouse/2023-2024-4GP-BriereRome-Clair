@@ -54,7 +54,7 @@ Une fois le document complété, nous avons imprimé le PCB et avons soudé chac
    Partie PCB : <br>
    <img src="Images/Kicad%20partie%202.png"   width=80%> <br>
 
-# 4. L'Arduino : [ici pour le code]([lien](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Projet_capt.ino))
+# 4. L'Arduino : [ici pour le code](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Projet_capt.ino)
 Gabi c'est aussi pour toi
 
 # 5. L'Application
