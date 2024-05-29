@@ -119,6 +119,8 @@ Afin de recentrer automatiquement le graphique, nous attendons d'avoir le bon no
 ### Objectifs
 Nous avons monté un banc de test afin d'etudier l'influence du type de crayon utilisé sur les performances du capteur et regarder la variation de résistance. <br>
 ### Méthode
-Pour cela nous avons utilisé des cercles de diamètre diffeernent et avons exprimé la variation de résistance en fonction de l'angle de flexion.
-<img src="Images/code%20app3.png"  width=80%> 
+Pour cela nous avons utilisé des cercles de diamètre diffeernent et avons exprimé la variation de résistance en fonction de l'angle de flexion. <br>
+<img src="Images/cercles de diamètres differents.png"  width=80%> <br>
+### Résultats
+
 
