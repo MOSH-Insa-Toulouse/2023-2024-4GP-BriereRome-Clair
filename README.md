@@ -10,7 +10,7 @@ L'objectif de ce projet est de tester les caractéristiques d'un capteur en grap
 ### [3. KiCad](KiCad)
 ### [4. L'Arduino](#dudu)
 ### [5. L'Application](#app)
-### [6. Résultats](#res) et [datasheet](lien)
+### [6. Résultats et datasheet](#res) [Lien datasheet ici](lien)
 
 # 1. Présentation Générale <a name="pg">
 Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
