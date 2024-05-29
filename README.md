@@ -4,8 +4,14 @@ Projet Capteur de Jules et Gabriel
 ## Contexte <br>
 Nous avons rélaié ce projet dans le carde de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
 L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphique. <br>
+## Somaire
+### [1. Presentation Générale](#pg)
+### [2. L'electronique analogique](#ea)
+### 3. KiCad
+### 4. L'Arduino
+### 5. L'Application
 
-# 1. Presentation Générale
+# 1. Presentation Générale <a name="pg">
 Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
 ```mermaid
     graph TD;
@@ -31,7 +37,7 @@ Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties
 ``` 
 Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour recolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
 
-# 2. L'electronique analogique
+# 2. L'electronique analogique <a name="ea">
 Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
     Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
     La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
