@@ -126,5 +126,5 @@ Nous avons obtenu les courbes ci-dessous. Nous observons que la variation est li
 Ce resultat est le meme en compression et en tension. <br>
 <br>
 <img src="Images/mesures flexion tension.png"  width=40%>
-<img src="Images/mesures flexion compression.png"  width=40%><br>
+<img src="Images/mesures flexion compression.png"  width=41%><br>
 
