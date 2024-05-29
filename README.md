@@ -7,9 +7,9 @@ L'objectif de ce projet est de tester les caractéristiques d'un capteur en grap
 ## Somaire
 ### [1. Presentation Générale](#pg)
 ### [2. L'electronique analogique](#ea)
-### 3. KiCad
-### 4. L'Arduino
-### 5. L'Application
+### [3. KiCad](KiCad)
+### [4. L'Arduino](#dudu)
+### [5. L'Application](#app)
 
 # 1. Presentation Générale <a name="pg">
 Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
@@ -42,7 +42,7 @@ Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur 
     Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
     La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
 
-# 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield)
+# 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield) <a name="KiCad">
 Nous avons réalisé un PCB en utilisant l'application Kicad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
 Nos contraintes etaient les suivantes:
 * Largeur de la piste : 0,5 mm minimum
@@ -60,7 +60,7 @@ Une fois le document complété, nous avons imprimé le PCB et avons soudé chac
    Partie PCB : <br>
    <img src="Images/Kicad%20partie%202.png"   width=80%> <br>
 
-# 4. L'Arduino : [ici pour le code](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Projet_capt.ino)
+# 4. L'Arduino : [ici pour le code](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Projet_capt.ino) <a name="dudu">
 ## Présentation générale
 Le programme Arduino permet de réaliser 4 fonctions :
 * ***Régalage*** du calibre de l'amplificateur avec **3 boutons**
@@ -85,7 +85,7 @@ Nous avons fait une lecture analogique sur les entrée puis utilisé mpa pour qu
 ## Détail sur la communication
 Nous avons écrit les données sur un port série relié au module bluetooth
 
-# 5. L'Application
+# 5. L'Application <a name="app">
 Afin de communiquer avec l'adruino, nous avons créé une application en utilisant "MIT app inventor".
 ## Présentation générale
 Notre application comporte : <br>
