@@ -2,17 +2,17 @@
 Projet Capteur de Jules et Gabriel 
 # Projet Capteur
 ## Contexte <br>
-Nous avons rélaié ce projet dans le carde de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
-L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphique. <br>
+Nous avons rélalisé ce projet dans le cadre de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
+L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphite. <br>
 ## Somaire
-### [1. Presentation Générale](#pg)
-### [2. L'electronique analogique](#ea)
+### [1. Présentation Générale](#pg)
+### [2. L'électronique analogique](#ea)
 ### [3. KiCad](KiCad)
 ### [4. L'Arduino](#dudu)
 ### [5. L'Application](#app)
 ### [6. Résultats](#res)
 
-# 1. Presentation Générale <a name="pg">
+# 1. Présentation Générale <a name="pg">
 Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
 ```mermaid
     graph TD;
@@ -36,7 +36,7 @@ Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties
     class Appli App;
     class PCB PCB1;
 ``` 
-Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour recolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
+Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour récolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
 
 # 2. L'electronique analogique <a name="ea">
 Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
@@ -123,6 +123,5 @@ Pour cela nous avons utilisé des cercles de diamètre diffeernent et avons expr
 <img src="Images/cercles de diamètres differents.png"  width=80%> <br>
 ### Résultats
 Nous avons obtenu les courbes ci-dessous. Nous observons que la variation est lineaire et que le type de crayon a une forte influence. Les crayons plus durs ("hard") semblent avoir une plus grande sensibilité que les crayons doux. <br>
-
-
+<img src="Images/mesures flexion.png"  width=80%> <br>
 
