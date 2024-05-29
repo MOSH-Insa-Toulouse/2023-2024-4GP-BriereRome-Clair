@@ -55,7 +55,29 @@ Une fois le document complété, nous avons imprimé le PCB et avons soudé chac
    <img src="Images/Kicad%20partie%202.png"   width=80%> <br>
 
 # 4. L'Arduino : [ici pour le code](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Projet_capt.ino)
-Gabi c'est aussi pour toi
+## Présentation générale
+Le programme Arduino permet de réaliser 4 fonctions :
+* ***Régalage*** du calibre de l'amplificateur avec **3 boutons**
+* ***Affichage*** du choix sur un **ecran OLED**
+* ***Acquisition*** des mesurese du **flex sensor**
+* ***Communication*** vers une appli Android via **bluetooth**
+Le code est modulaire, chaque fonctionnalité est assurée par une fonction indépendante.
+
+## Détail sur les bouton
+On utilise 3 boutons (+, - et ok) pour choisir la valeur du gain. La boucle générale met assez de temps à s'exécuter pour ne pas avopir à gérer le débouncing des boutons. On a aussi implémenter un timer qui permet que la valeur de change pas trop vite en cas d'appuie long.
+Le code utilise 2 variables (valeur séléctionnée et valeur validée)
+
+## Détail sur l'écran
+Nous avons utilisé très simplement la librairie ecranOLED
+
+## Détail sur le potentiomètre numérique
+Ce composant communique avec le protocole SPI, nous avons donc utilisé la librairie SPI.
+
+## Détail sur l'acquisition des données
+Nous avons fait une lecture analogique sur les entrée puis utilisé mpa pour que les données soient transférable via le module bluetooth.
+
+## Détail sur la communication
+Nous avons écrit les données sur un port série relié au module bluetooth
 
 # 5. L'Application
 Afin de communiquer avec l'adruino, nous avons créé une application en utilisant "MIT app inventor".
