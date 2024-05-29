@@ -119,9 +119,12 @@ Afin de recentrer automatiquement le graphique, nous attendons d'avoir le bon no
 ### Objectifs
 Nous avons monté un banc de test afin d'etudier l'influence du type de crayon utilisé sur les performances du capteur et regarder la variation de résistance. <br>
 ### Méthode
-Pour cela nous avons utilisé des cercles de diamètre diffeernent et avons exprimé la variation de résistance en fonction de la deformation. <br>
-<img src="Images/cercles de diamètres differents.png"  width=80%> <br>
+Pour cela nous avons utilisé des cercles de diamètre differnent (2cm, 3cm, 4cm et 5cm). La déformation est calculée selon l'expression suivante : $\varepsilon = \frac{D}{e}$ avec $D$ diamètre du demi-cercle et épaisseur du papier. <br>
+Nous avons ensuite exprimé la variation de résistance en fonction de la deformation. <br>
 ### Résultats
 Nous avons obtenu les courbes ci-dessous. Nous observons que la variation est lineaire et que le type de crayon a une forte influence. Les crayons plus durs ("hard") semblent avoir une plus grande sensibilité que les crayons doux. <br>
-<img src="Images/mesures flexion.png"  width=80%> <br>
+Ce resultat est le meme en compression et en tension. <br>
+<br>
+<img src="Images/mesures flexion tension.png"  width=40%>
+<img src="Images/mesures flexion compression.png"  width=40%><br>
 
