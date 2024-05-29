@@ -115,5 +115,10 @@ Afin de rendre les données facilment lisisbles, nous avons décidé d'utiliser 
 Afin de recentrer automatiquement le graphique, nous attendons d'avoir le bon nombre de mesures et utilisons ensuite la fonction SetDomain pour décaler le graphique. Le bouton reset permet de remettre l'echelle à 0.
 <img src="Images/code%20app3.png"  width=80%> 
 
-# 6. Résultats <a name="res">
+# 6. Résultats et banc de teest <a name="res">
+### Objectifs
+Nous avons monté un banc de test afin d'etudier l'influence du type de crayon utilisé sur les performances du capteur et regarder la variation de résistance. <br>
+### Méthode
+Pour cela nous avons utilisé des cercles de diamètre diffeernent et avons exprimé la variation de résistance en fonction de l'angle de flexion.
+<img src="Images/code%20app3.png"  width=80%> 
 
