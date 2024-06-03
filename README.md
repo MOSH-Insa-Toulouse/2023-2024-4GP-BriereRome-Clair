@@ -10,23 +10,25 @@ L'objectif de ce projet est de tester les caractéristiques d'un capteur en grap
 ### [3. KiCad](KiCad)
 ### [4. L'Arduino](#dudu)
 ### [5. L'Application](#app)
-### [6. Résultats et datasheet :](#res) Lien datasheet [ici](lien)
+### [6. Résultats et datasheet](#res) 
 
 # 1. Présentation Générale <a name="pg">
-Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties differentes de notre projet. <br>
+Voici ci-dessous un schéma de notre projet qui permet de visualiser le lien entre chaque partie. <br>
 ```mermaid
     graph TD;
     classDef PCB1 fill:pink,color:black,stroke:black;
     classDef App fill:lightblue,color:black,stroke:black;
-    A[Flex Sensor]-->B((Carte Arduino));
     B((Carte Arduino))-->Module_BT;
     Boutons-->B((Carte Arduino));
-    D[Capteur Graphite]-->Ampli;
     Ampli-->B((Carte Arduino));
-    Potentiomètre-->Ampli;
+    Potentiomètre -.- OLED;
+    Potentiomètre-->Ampli; 
+    D[Capteur Graphite]-->Ampli;
+    Boutons -.- Potentiomètre;
     B((Carte Arduino))-->Potentiomètre;
-    Appli -.- Module_BT;
+    Module_BT -.-> appli;
     B((Carte Arduino))-->OLED;
+    A[Flex Sensor]-->B((Carte Arduino));
     PCB
     class Ampli PCB1;
     class Potentiomètre PCB1;
@@ -36,15 +38,15 @@ Voici ci-dessus un petit schéma de notre projet. comprenant chacune des parties
     class Appli App;
     class PCB PCB1;
 ``` 
-Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance etant très grande, le signal est très faible. Ainsi, nous utilisons un ampli pour augmenter le signal. Nous utilisons ensuite un arduino pour récolter et transmettre les données que nous lisons sur une application. Nous avons aussi des boutons et un afficheur LED afin de changer la valeur du potententiometre qui module le gain de l'ampli. <br>
+Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance étant très grande, le signal à mesurer est très faible. Nous utilisons donc un ampli pour augmenter le signal et qu'il soit donc mesurable. Nous utilisons ensuite une carte arduino uno pour mesurer ce signal et les transmettre via bluetooth à une application mobile. Nous utilisons aussi des boutons et un afficheur OLED afin de changer la valeur d'un potententiomètre digital qui module le gain de l'ampli. <br>
 
 # 2. L'electronique analogique <a name="ea">
 Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
-    Cependnat, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
-    La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
+Cependant, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
+La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
 
 # 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield) <a name="KiCad">
-Nous avons réalisé un PCB en utilisant l'application Kicad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
+Nous avons réalisé un PCB en utilisant l'application KiCad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
 Nos contraintes etaient les suivantes:
 * Largeur de la piste : 0,5 mm minimum
 * Isolation des pistes : 0.5mm minimum
