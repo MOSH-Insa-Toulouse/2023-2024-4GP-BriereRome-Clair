@@ -134,4 +134,4 @@ Ce resultat est le même en compression et en tension. <br>
 <img src="Images/mesures flexion tension.png"  width=40%>
 <img src="Images/mesures flexion compression.png"  width=41%><br>
 ### datasheet
-Afin de synthétiser nos résultats, nous avons fait une datasheet disponible [ici](lien).
+Afin de synthétiser nos résultats, nous avons fait une datasheet disponible [ici]([lien](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/blob/main/Datasheet.docx)).
