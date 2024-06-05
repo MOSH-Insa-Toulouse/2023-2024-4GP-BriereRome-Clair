@@ -2,8 +2,8 @@
 Projet Capteur de Jules et Gabriel 
 # Projet Capteur
 ## Contexte <br>
-Nous avons rélalisé ce projet dans le cadre de notre cours de MOSH à l'INSA Toulouse en 4A au sein du Génie Physique. <br>
-L'objectif de ce projet est de tester les caractéristiques d'un capteur en graphite. <br>
+Nous avons rélalisé ce projet dans le cadre de notre cours de MOSH (Microcontroleur en Open Source Hardware) à l'INSA Toulouse en 4ème année au sein du département de Génie Physique. <br>
+L'objectif de ce projet est de tester les caractéristiques d'un capteur de flexion en graphite. <br>
 ## Somaire
 ### [1. Présentation Générale](#pg)
 ### [2. L'électronique analogique](#ea)
@@ -38,12 +38,13 @@ Voici ci-dessous un schéma de notre projet qui permet de visualiser le lien ent
     class Appli App;
     class PCB PCB1;
 ``` 
-Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance étant très grande, le signal à mesurer est très faible. Nous utilisons donc un ampli pour augmenter le signal et qu'il soit donc mesurable. Nous utilisons ensuite une carte arduino uno pour mesurer ce signal et les transmettre via bluetooth à une application mobile. Nous utilisons aussi des boutons et un afficheur OLED afin de changer la valeur d'un potententiomètre digital qui module le gain de l'ampli. <br>
+Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance étant très grande, le signal à mesurer est très faible. Nous utilisons donc un amplificateur pour augmenter le signal et qu'il soit ainsi mesurable. Nous utilisons ensuite une carte arduino uno pour mesurer ce signal et le transmettre via bluetooth à une application mobile. Nous utilisons aussi des boutons et un afficheur OLED afin de changer la valeur d'un potententiomètre digital qui module le gain de l'amplificateur. <br>
 
 # 2. L'electronique analogique <a name="ea">
-Notre capteur est un capteur à resistance variable. Ainsi, pour lire la valeur de la resistance, nous utilisons un pont diviseur de tension.<br>
-Cependant, le signal obtenu est très faible. Pour l'amplifier, nous utilisons un Amplificateur transimpédence<br>
+La résistance de notre capteur en graphite varie en fonction de sa flexion. Nous cherchons donc à mesurer les variations de résistance de ce capteur. Cependant il n'y a que des entrée analogique de tension, et les variations de signal sont tres petite, il nous faut donc utiliser un circuit amplificateur transimpédence afin de pouvoir mesurer cette variation.
+
 La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
+
 
 # 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield) <a name="KiCad">
 Nous avons réalisé un PCB en utilisant l'application KiCad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
