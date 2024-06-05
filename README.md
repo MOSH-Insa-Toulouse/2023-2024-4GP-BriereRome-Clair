@@ -41,10 +41,13 @@ Voici ci-dessous un schéma de notre projet qui permet de visualiser le lien ent
 Afin de mesurer la flexion de notre capteur graphite nous mesurons sa resistance. Cependant, sa resitance étant très grande, le signal à mesurer est très faible. Nous utilisons donc un amplificateur pour augmenter le signal et qu'il soit ainsi mesurable. Nous utilisons ensuite une carte arduino uno pour mesurer ce signal et le transmettre via bluetooth à une application mobile. Nous utilisons aussi des boutons et un afficheur OLED afin de changer la valeur d'un potententiomètre digital qui module le gain de l'amplificateur. <br>
 
 # 2. L'electronique analogique <a name="ea">
-La résistance de notre capteur en graphite varie en fonction de sa flexion. Nous cherchons donc à mesurer les variations de résistance de ce capteur. Cependant il n'y a que des entrée analogique de tension, et les variations de signal sont tres petite, il nous faut donc utiliser un circuit amplificateur transimpédence afin de pouvoir mesurer cette variation.
+La résistance de notre capteur en graphite varie en fonction de sa flexion. Nous cherchons donc à mesurer les variations de résistance de ce capteur. Cependant il n'y a que des entrée analogique de tension, et les variations de signal sont très petites, il nous faut donc utiliser un circuit amplificateur transimpédence afin d'obtenir une variation de tension mesurable par les convertisseur Analogique-Numérique de l'Arduino.
 
-La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.<br>
-
+La résistance du capteur varie en fonction de sa déformation. On impose une tension à ses bornes et on détecte donc une variation de courrant. On fait passer ce courrant dans une résistance de shunt vers la masse, la tension au borne de cette résistance de shunt varie donc avec la déformation du capteur. C'est cette tension que l'on va amplifier.
+<br>
+Schéma de l'amplificateur : <br>
+<img src="Images/ElecAna"   width=50%> <br>
+La résistance R2 est remplacée par un potentiomètre digital afin de pouvoir régler le gain de l'amplificateur.
 
 # 3. KiCad : [ici pour les docs](https://github.com/MOSH-Insa-Toulouse/2023-2024-4GP-BriereRome-Clair/tree/main/Shield) <a name="KiCad">
 Nous avons réalisé un PCB en utilisant l'application KiCad8. Pour ce faire, nous avons repris le schéma éléctrique decrit ci-dessus. <br>
@@ -84,10 +87,10 @@ Nous avons utilisé très simplement la librairie ecranOLED
 Ce composant communique avec le protocole SPI, nous avons donc utilisé la librairie SPI.
 
 ## Détail sur l'acquisition des données
-Nous avons fait une lecture analogique sur les entrée puis utilisé mpa pour que les données soient transférable via le module bluetooth.
+Nous avons fait une lecture analogique sur les entrée puis utilisé map pour que les données soient transférable via le module bluetooth en un seul octet.
 
 ## Détail sur la communication
-Nous avons écrit les données sur un port série relié au module bluetooth
+Nous avons écrit les données sur un port série relié au module bluetooth.
 
 # 5. L'Application <a name="app">
 Afin de communiquer avec l'adruino, nous avons créé une application en utilisant "MIT app inventor".
@@ -96,7 +99,7 @@ Notre application comporte : <br>
 * 2 graphiques :
     * 1 pour le capteur graphite
     * 1 pour le flex sensor
-* 2 afficheurs numériques avec des valeurs en 0 et 255
+* 2 afficheurs numériques avec des valeurs entre 0 et 255
   * 1 pour le capteur graphite
   * 1 pour le flex sensor
 * 1 bouton de sélection Bluetooth
@@ -105,16 +108,16 @@ Notre application comporte : <br>
    <img src="Images/code%20app.png"  width=60%> 
    <img src="Images/ecrant%20app.png"  width= 30%> <br>
 ## Partie 1 : Sélection du périphérique Bluetooth
-En cliquant sur le bouton "select bluetooth", vous pouvez ouvrir une liste deroulante et selectionner le bluetooth dont vous avez besoin.
+En cliquant sur le bouton "select bluetooth", vous pouvez ouvrir une liste déroulante et selectionner le bluetooth correspondant au module bluetooth utillisé sur le PCB.
  <img src="Images/code%20app1.png"  width=80%> 
  
 ## Partie 2 : Reception des données
-Le fait de selectionner un Bluetooth déclenche une cloque qui va sequencer la reception de données. <br>
-La boucle de la cloque verifie si des données sont disponibles. Si il y en a, elle met chacune des deux valeurs (Flex sensor et capteur graphite) dans une variable. <br>
+Le fait de sélectionner un Bluetooth déclenche une horloge qui va séquencer la reception de données. <br>
+La boucle de l'horloge verifie si des données sont disponibles. Si il y en a, elle met chacune des deux valeurs (Flex sensor et capteur graphite) dans une variable. <br>
 <img src="Images/code%20app2.png"  width=80%> 
 
 ## Partie 3 : Affichage graphique
-Afin de rendre les données facilment lisisbles, nous avons décidé d'utiliser des graphiques. Pour cela nous avons utilisé les chart2D. <br>
+Afin de rendre les données facilement lisibles, nous avons décidé d'utiliser des graphiques. Pour cela nous avons utilisé les chart2D. <br>
 Afin de recentrer automatiquement le graphique, nous attendons d'avoir le bon nombre de mesures et utilisons ensuite la fonction SetDomain pour décaler le graphique. Le bouton reset permet de remettre l'echelle à 0.
 <img src="Images/code%20app3.png"  width=80%> 
 
@@ -126,9 +129,9 @@ Pour cela nous avons utilisé des cercles de diamètre differnent (2cm, 3cm, 4cm
 Nous avons ensuite exprimé la variation de résistance en fonction de la deformation. <br>
 ### Résultats
 Nous avons obtenu les courbes ci-dessous. Nous observons que la variation est lineaire et que le type de crayon a une forte influence. Les crayons plus durs ("hard") semblent avoir une plus grande sensibilité que les crayons doux. <br>
-Ce resultat est le meme en compression et en tension. <br>
+Ce resultat est le même en compression et en tension. <br>
 <br>
 <img src="Images/mesures flexion tension.png"  width=40%>
 <img src="Images/mesures flexion compression.png"  width=41%><br>
 ### datasheet
-Afin de synthétisé nos résultats, nous avons fait une datasheet disponible [ici](lien).
+Afin de synthétiser nos résultats, nous avons fait une datasheet disponible [ici](lien).
